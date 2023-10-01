@@ -8,14 +8,10 @@ import torch.utils.data
 import numpy as np
 import netCDF4 as nc
 import xarray as xr
-import time
 
 # custom functions
 from data_loader_SSH import load_test_data
 from data_loader_SSH import load_train_data
-from count_trainable_params import count_parameters
-from utilities3 import *
-import mod_hausdorff as mh
 
 DEVICE = "cuda" if torch.cuda.is_available() else 'cpu'
 data_dir = '/path_to_data_directory/'
